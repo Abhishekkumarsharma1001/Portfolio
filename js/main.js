@@ -127,7 +127,43 @@
     AOSStart();
   })();
 })(jQuery);
+
 function play() {
   audio.play();
   audio.loop = true;
 }
+
+// Contact Form Submission Handler
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert("Form Submitted Successfully");
+            window.open("thankyou.html", "_blank");
+            form.reset();
+          } else {
+            alert("Oops! Something went wrong.");
+          }
+        })
+        .catch((error) => {
+          alert("Error submitting form.");
+          console.error(error);
+        });
+    });
+  }
+});

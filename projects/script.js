@@ -102,3 +102,29 @@ document.onkeydown = function (e) {
         return false;
     }
 };
+
+// ✅ Custom form submission with alert + redirect
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop default form submission
+
+    alert("Form Submitted Successfully"); // show alert
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // send data to Formspree
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            window.open("thankyou.html", "_blank"); // redirect to thankyou page
+            form.reset(); // optional: reset form after submission
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    });
+});
