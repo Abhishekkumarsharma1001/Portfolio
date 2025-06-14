@@ -1,4 +1,14 @@
 [
+    {
+    "name": "E-commerce Website",
+    "desc": "Basic website template built using HTML, Css and Js.",
+    "image": "bootstraptemplate",
+    "category": "basicweb",
+    "links": {
+      "view": "https://cheery-tiramisu-78e785.netlify.app/",
+      "code": "https://github.com/Abhishekkumarsharma1001/E-Shop-Website.git"
+    }
+  },
   {
     "name": "Instagram Clone",
     "desc": "Full-Stack Instagram clone built using MERN stack and realtime chat with the help of socket.iO",
@@ -60,22 +70,12 @@
     }
   },
   {
-    "name": "Bootstrap Portfolio",
-    "desc": "Portfolio built using HTML, CSS, Bootstrap, SASS and JavaScript. Customized Bootstrap using SCSS.",
+    "name": "Portfolio",
+    "desc": "Portfolio built using HTML, CSS and JavaScript. Customized Bootstrap using SCSS.",
     "image": "bootstrapportfolio",
     "category": "basicweb",
     "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Bootstrap Template",
-    "desc": "Basic website template built using HTML and Bootstrap.",
-    "image": "bootstraptemplate",
-    "category": "basicweb",
-    "links": {
-      "view": "#",
+      "view": "https://abhishekkrsharma.vercel.app/",
       "code": "#"
     }
   },
