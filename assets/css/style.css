@@ -970,8 +970,8 @@ header .navbar ul li a:hover {
 .testimonial-carousel {
   display: flex;
   gap: 1.5rem;
-  animation: scroll-carousel 50s linear infinite;
-  width: max-content;
+  animation: scroll-carousel 60s linear infinite;
+  will-change: transform;
 }
 
 .carousel-wrapper:hover .testimonial-carousel {
@@ -990,10 +990,10 @@ header .navbar ul li a:hover {
 .testimonial-card {
   flex: 0 0 28rem;
   width: 28rem;
-  height: 28rem;
+  height: 35rem;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
-  border-radius: 1.6rem;
+  border-radius: 1.8rem;
   padding: 2rem;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -1054,6 +1054,36 @@ header .navbar ul li a:hover {
   flex-grow: 1;
   display: flex;
   align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card .social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(37, 6, 173, 0.1);
+  color: #2506ad;
+  transition: 0.3s ease;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.testimonial-card .social-icon:hover {
+  background: #2506ad;
+  color: #fff;
+  transform: scale(1.15);
 }
 
 /* testimonials media queries starts */
@@ -1061,7 +1091,7 @@ header .navbar ul li a:hover {
   .testimonial-card {
     flex: 0 0 25rem;
     width: 25rem;
-    height: 25rem;
+    height: 32rem;
     padding: 1.8rem;
   }
 
@@ -1079,6 +1109,12 @@ header .navbar ul li a:hover {
   }
 
   .testimonial-card .feedback {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-card .social-icon {
+    width: 2.3rem;
+    height: 2.3rem;
     font-size: 1.1rem;
   }
 }
@@ -1101,7 +1137,7 @@ header .navbar ul li a:hover {
   .testimonial-card {
     flex: 0 0 22rem;
     width: 22rem;
-    height: 22rem;
+    height: 28rem;
     padding: 1.6rem;
   }
 
@@ -1127,6 +1163,13 @@ header .navbar ul li a:hover {
   }
 
   .testimonial-card .feedback {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card .social-icon {
+    width: 2.2rem;
+    height: 2.2rem;
     font-size: 1rem;
   }
 }
@@ -1169,7 +1212,7 @@ header .navbar ul li a:hover {
   .testimonial-card {
     flex: 0 0 20rem;
     width: 20rem;
-    height: 20rem;
+    height: 26rem;
     padding: 1.4rem;
   }
 
@@ -1197,6 +1240,13 @@ header .navbar ul li a:hover {
   .testimonial-card .feedback {
     font-size: 0.95rem;
     line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .testimonial-card .social-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.9rem;
   }
 }
 /* testimonials media queries ends */
