@@ -965,12 +965,14 @@ header .navbar ul li a:hover {
   padding: 2rem 0;
   display: flex;
   justify-content: center;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .testimonial-carousel {
   display: flex;
   gap: 1.5rem;
-  animation: scroll-carousel 60s linear infinite;
+  animation: scroll-carousel 15s linear infinite;
   will-change: transform;
 }
 
@@ -980,10 +982,10 @@ header .navbar ul li a:hover {
 
 @keyframes scroll-carousel {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
   }
   100% {
-    transform: translateX(calc(-50% - 0.75rem));
+    transform: translateX(calc(-50% - 0.75rem)) scale(1);
   }
 }
 
@@ -1001,13 +1003,14 @@ header .navbar ul li a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: 0.3s ease;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .testimonial-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(37, 6, 173, 0.25);
-  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.08);
+  box-shadow: 0 20px 50px rgba(37, 6, 173, 0.35);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .testimonial-card .card-avatar {
@@ -1039,6 +1042,12 @@ header .navbar ul li a:hover {
   color: #ffc107;
   margin-bottom: 1rem;
   letter-spacing: 0.2rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.testimonial-card:hover .stars {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.4));
 }
 
 .testimonial-card .stars i {
@@ -1075,7 +1084,7 @@ header .navbar ul li a:hover {
   border-radius: 50%;
   background: rgba(37, 6, 173, 0.1);
   color: #2506ad;
-  transition: 0.3s ease;
+  transition: all 0.35s ease-in-out;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -1083,7 +1092,8 @@ header .navbar ul li a:hover {
 .testimonial-card .social-icon:hover {
   background: #2506ad;
   color: #fff;
-  transform: scale(1.15);
+  transform: scale(1.2) translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 6, 173, 0.3);
 }
 
 /* testimonials media queries starts */
