@@ -1064,7 +1064,7 @@ header .navbar ul li a:hover {
 
 /* testimonials section starts */
 .testimonials {
-  background: linear-gradient(135deg, #f7f7f7 0%, #f0f0f5 100%);
+  background: transparent;
   min-height: 80vh;
   padding: 3rem 9%;
   display: flex;
@@ -1091,14 +1091,16 @@ header .navbar ul li a:hover {
 }
 
 .carousel-wrapper {
-  overflow: hidden;
+  overflow: auto;
   position: relative;
-  width: 100%;
+  width: auto;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
+  align-items: stretch;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-carousel {
@@ -1129,7 +1131,7 @@ header .navbar ul li a:hover {
   backdrop-filter: blur(10px);
   border-radius: 1.8rem;
   padding: 2rem;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15), 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: column;
@@ -1137,6 +1139,34 @@ header .navbar ul li a:hover {
   text-align: center;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+}
+
+/* Unique card colors */
+.testimonial-carousel > .testimonial-card:nth-child(1),
+.testimonial-carousel > .testimonial-card:nth-child(7) {
+  background: rgba(182, 232, 243, 0.85);
+}
+
+.testimonial-carousel > .testimonial-card:nth-child(2),
+.testimonial-carousel > .testimonial-card:nth-child(8) {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.testimonial-carousel > .testimonial-card:nth-child(3),
+.testimonial-carousel > .testimonial-card:nth-child(9) {
+  background: rgba(239, 195, 196, 0.98);
+}
+
+.testimonial-carousel > .testimonial-card:nth-child(4) {
+  background: rgba(238, 185, 154, 0.85);
+}
+
+.testimonial-carousel > .testimonial-card:nth-child(5) {
+  background: rgba(237, 175, 239, 0.98);
+}
+
+.testimonial-carousel > .testimonial-card:nth-child(6) {
+  background: rgba(197, 175, 226, 0.98);
 }
 
 .testimonial-card:hover {
