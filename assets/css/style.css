@@ -1087,6 +1087,8 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   animation: scroll-carousel 15s linear infinite;
   will-change: transform;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .carousel-wrapper:hover .testimonial-carousel {
